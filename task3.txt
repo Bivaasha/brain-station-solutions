@@ -1,0 +1,12 @@
+CREATE TABLE NAMES(Id integer PRIMARY KEY, Name text, Marks integer);
+
+/* Create few records in this table */
+INSERT INTO NAMES VALUES(1,'Ashley',81);
+INSERT INTO NAMES VALUES(2,'Samantha',75);
+INSERT INTO NAMES VALUES(3,'Julia', 76);
+INSERT INTO NAMES VALUES(4,'Belvet', 84);
+
+COMMIT;
+
+/* Display all the records from the table */
+SELECT Name FROM NAMES WHERE Marks > 75 ORDER BY substr(Name,  -3), Id;
